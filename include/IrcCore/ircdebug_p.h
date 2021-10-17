@@ -143,7 +143,7 @@ static bool irc_debug_enabled(IrcConnection* c, uint l)
         dbg_init = true;
     }
 
-    return l <= dbg_level && (dbg_name.isEmpty() || QRegularExpression(QRegularExpression::wildcardToRegularExpression(dbg_name), QRegularExpression::CaseInsensitiveOption).match(c->displayName()).hasMatch());
+    return l <= dbg_level && (dbg_name.isEmpty() || QRegularExpression(dbg_name+".*", QRegularExpression::CaseInsensitiveOption).match(c->displayName()).hasMatch());
 }
 
 #define ircDebug(Connection, Flag) IrcDebug(Connection, Flag)
