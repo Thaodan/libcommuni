@@ -26,6 +26,8 @@
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+#include <functional>
+
 #include "ircmessage.h"
 #include "ircmessage_p.h"
 #include "ircconnection.h"
